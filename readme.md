@@ -15,4 +15,8 @@
 5. Run package install 
 
    `ansible-playbook Kali_Build/setup.yaml`
-```
+
+## Todo
+* Add PowerLine setup
+* Add Neofetch to packages
+* Add tmux config
