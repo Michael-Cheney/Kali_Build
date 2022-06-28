@@ -74,6 +74,10 @@
     package:
       name: dconf-cli
       state: present
+  - name: Install gnome-font-viewer
+    package:
+      name: gnome-font-viewer
+      state: present
   - name: Install Visual Studio
     apt:
       deb: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code_1.68.1-1655263094_amd64.deb
