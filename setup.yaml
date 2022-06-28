@@ -66,6 +66,14 @@
     package:
       name: mingw-w64 
       state: present
+  - name: Install mingw-w64
+    package:
+      name: mingw-w64 
+      state: present
+  - name: Download Visual Studio
+    ansible.builtin.get_url:
+      url: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code_1.68.1-1655263094_amd64.deb
+      dest: /home/kali/code_1.68.1-1655263094_amd64.deb
   - name: Copy a ZSH profile
     ansible.builtin.copy:
       src: /home/kali/Kali_Build/zshrc.bak
