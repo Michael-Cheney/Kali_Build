@@ -62,6 +62,10 @@
     package:
       name: chisel 
       state: present
+  - name: Install mingw-w64
+    package:
+      name: mingw-w64 
+      state: present
   - name: Copy a ZSH profile
     ansible.builtin.copy:
       src: /home/kali/Kali_Build/zshrc.bak
