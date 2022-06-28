@@ -11,8 +11,8 @@
    `git clone https://github.com/Michael-Cheney/Kali_Build.git`
 4. Install Kali updates
 
-   `ansible-playbook upgrade.yaml`
+   `ansible-playbook Kali_Build/upgrade.yaml`
 5. Run package install 
 
-   `ansible-playbook setup.yaml`
+   `ansible-playbook Kali_Build/setup.yaml`
 ```
