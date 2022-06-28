@@ -6,10 +6,13 @@
 2. Install Ansible
 
    `sudo apt install ansible -y`
-3. Install Kali updates
+3. Clone this repo
+
+   `git clone https://github.com/Michael-Cheney/Kali_Build.git`
+4. Install Kali updates
 
    `ansible-playbook upgrade.yaml`
-4. Run package install 
+5. Run package install 
 
    `ansible-playbook setup.yaml`
 ```
