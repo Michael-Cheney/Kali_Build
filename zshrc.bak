@@ -303,4 +303,4 @@ alias cbwd="pwd | cb"
 # Copy most recent command in bash history
 alias cbhs="cat $HISTFILE | tail -n 1 | cb"
 # Rustscan
-alias rs="sudo docker run -it --rm --name rustscan rustscan/rustscan:1.10.0
+alias rs="sudo docker run -it --rm --name rustscan rustscan/rustscan:1.10.0"
