@@ -58,6 +58,10 @@
     package:
       name: xclip 
       state: present
+  - name: Install chisel
+    package:
+      name: chisel 
+      state: present
   - name: Copy a ZSH profile
     ansible.builtin.copy:
       src: /home/kali/Kali_Build/zshrc.bak
