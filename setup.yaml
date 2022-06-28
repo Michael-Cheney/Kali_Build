@@ -54,6 +54,10 @@
     package:
       name: wkhtmltopdf 
       state: present
+  - name: Install xclip
+    package:
+      name: xclip 
+      state: present
   - name: Copy a ZSH profile
     ansible.builtin.copy:
       src: /home/kali/Kali_Build/zshrc.bak
