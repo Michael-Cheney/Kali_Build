@@ -126,7 +126,7 @@
       dest: /home/kali/Desktop/Burp Suite Professional.desktop
       owner: kali
       group: kali
-      mode: '0644'
+      mode: '0755'
   - name: Copy offsec script
     ansible.builtin.copy:
       src: /home/kali/Kali_Build/scripts/offsec
