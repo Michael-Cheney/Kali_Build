@@ -148,3 +148,5 @@
     command: su -c 'guake &' kali
   - name: Configure Guake Terminal
     command: su -c 'guake --restore-preferences=/home/kali/Kali_Build/guake.conf' kali
+  - name: Set Timezone
+    command: timedatectl set-timezone Australia/Sydney
