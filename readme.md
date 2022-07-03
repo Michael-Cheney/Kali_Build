@@ -37,3 +37,6 @@ https://addons.mozilla.org/firefox/addon/traduzir-paginas-web/
 * SQLmap
 cd \opt
 sudo git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+
+* Install PowerShell 
+`sudo apt -y install powershell`

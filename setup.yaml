@@ -83,7 +83,7 @@
       deb: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code_1.68.1-1655263094_amd64.deb
   - name: Copy a ZSH profile
     ansible.builtin.copy:
-      src: /home/kali/Kali_Build/zshrc.bak
+      src: /home/kali/Kali_Build/.zshrc
       dest: /home/kali/.zshrc
       owner: kali
       group: kali
