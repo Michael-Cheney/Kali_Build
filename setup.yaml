@@ -141,8 +141,10 @@
       url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
       dest: '/home/kali/.local/share/fonts/MesloLGS NF Bold Italic.ttf'
   - name: Change permissions of .tmux folder
-    command: chown -R kali:kali .tmux/
+    command: chown -R kali:kali /home/kali/.tmux/
   - name: Change permissions of powerlevel10k folder
-    command: chown -R kali:kali powerlevel10k/
+    command: chown -R kali:kali /home/kali/powerlevel10k/
+  - name: Start Guake Terminal
+    command: su -c 'guake &' kali
   - name: Configure Guake Terminal
-    command: guake --restore-preferences=/home/kali/Kali_Build/guake.conf
+    command: su -c 'guake --restore-preferences=/home/kali/Kali_Build/guake.conf' kali
