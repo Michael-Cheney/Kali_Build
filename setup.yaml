@@ -88,3 +88,10 @@
       owner: kali
       group: kali
       mode: '0644'
+  - name: Copy a Tmux profile
+    ansible.builtin.copy:
+      src: /home/kali/Kali_Build/.tmux.conf
+      dest: /home/kali/.tmux.conf
+      owner: kali
+      group: kali
+      mode: '0644'
