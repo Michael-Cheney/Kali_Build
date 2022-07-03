@@ -123,7 +123,7 @@
   - name: Copy BurpSuite App Link
     ansible.builtin.copy:
       src: '/home/kali/Kali_Build/icons/Burp Suite Professional.desktop'
-      dest: /home/kali/burp/burp.png
+      dest: /home/kali/Desktop/Burp Suite Professional.desktop
       owner: kali
       group: kali
       mode: '0644'
