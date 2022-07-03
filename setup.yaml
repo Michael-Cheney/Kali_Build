@@ -102,6 +102,13 @@
       owner: kali
       group: kali
       mode: '0644'
+  - name: Copy offsec script
+    ansible.builtin.copy:
+      src: /home/kali/Kali_Build/scripts/offsec
+      dest: /usr/local/sbin/offsec
+      owner: kali
+      group: kali
+      mode: '0777'
   - name: Clone SQLMap github repository
     git:
       repo: https://github.com/sqlmapproject/sqlmap.git
@@ -128,6 +135,17 @@
     file:
       path: /home/kali/share
       state: directory
+  - name: Create directory for scripts
+    file:
+      path: /home/kali/scripts
+      state: directory
+  - name: Copy ipaddress script
+    ansible.builtin.copy:
+      src: /home/kali/Kali_Build/scripts/ipaddress.sh
+      dest: /home/kali/scripts/ipaddress.sh
+      owner: kali
+      group: kali
+      mode: '0777'
   - name: Create directory for linux
     file:
       path: /home/kali/share/linux/privesc
@@ -160,7 +178,9 @@
     command: chown -R kali:kali /home/kali/.tmux/
   - name: Change permissions of powerlevel10k folder
     command: chown -R kali:kali /home/kali/powerlevel10k/
-  - name: Change permissions of powerlevel10k folder
+  - name: Change permissions of scripts folder
+    command: chown -R kali:kali /home/kali/scripts/
+  - name: Change permissions of share folder
     command: chown -R kali:kali /home/kali/share/
   - name: Start Guake Terminal
     command: su -c 'guake &' kali
