@@ -113,3 +113,7 @@
       dest: /home/kali/powerlevel10k
       clone: yes
       update: yes
+  - name: Download & Install MesloLGS NF Regular.ttf
+    get_url:
+      url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+      dest: '/home/kali/.local/share/fonts/MesloLGS NF Regular.ttf'
