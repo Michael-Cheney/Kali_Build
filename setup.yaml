@@ -127,7 +127,19 @@
   - name: Create directory for share
     file:
       path: /home/kali/share
-      state: directory       
+      state: directory
+  - name: Create directory for linux
+    file:
+      path: /home/kali/share/linux/privesc
+      state: directory        
+  - name: Download & Install pspy32
+    get_url:
+      url: https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32
+      dest: '/home/kali/share/linux/privesc/pspy32'
+  - name: Download & Install pspy64
+    get_url:
+      url: https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
+      dest: '/home/kali/share/linux/privesc/pspy64'
   - name: Download & Install MesloLGS NF Regular.ttf
     get_url:
       url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
@@ -148,6 +160,8 @@
     command: chown -R kali:kali /home/kali/.tmux/
   - name: Change permissions of powerlevel10k folder
     command: chown -R kali:kali /home/kali/powerlevel10k/
+  - name: Change permissions of powerlevel10k folder
+    command: chown -R kali:kali /home/kali/share/
   - name: Start Guake Terminal
     command: su -c 'guake &' kali
   - name: Configure Guake Terminal
