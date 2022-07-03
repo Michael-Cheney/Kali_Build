@@ -95,3 +95,21 @@
       owner: kali
       group: kali
       mode: '0644'
+  - name: Clone SQLMap github repository
+    git:
+      repo: https://github.com/sqlmapproject/sqlmap.git
+      dest: /home/ubuntu/sqlmap/
+      clone: yes
+      update: yes
+  - name: Clone tmux-plugin tpm github repository
+    git:
+      repo: https://github.com/tmux-plugins/tpm
+      dest: ~/.tmux/plugins/tpm
+      clone: yes
+      update: yes
+  - name: Clone powerlevel10k github repository
+    git:
+      repo: https://github.com/romkatv/powerlevel10k.git
+      dest: ~/powerlevel10k
+      clone: yes
+      update: yes
