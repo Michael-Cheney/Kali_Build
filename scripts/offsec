@@ -23,7 +23,7 @@ tmux send-keys -t $2 'nc -lvp 235 > privesc.tar' C-m
 tmux new-window -n services -t $2
 tmux send-keys -t $2 'cd /home/kali/share/' C-m
 tmux send-keys -t $2 'clear' C-m
-tmux send-keys -t $2 'python -m SimpleHTTPServer 80' C-m
+tmux send-keys -t $2 'python3 -m http.server 80' C-m
 tmux split-window -v -t $2
 tmux send-keys -t $2 'python3 /usr/share/doc/python3-impacket/examples/smbserver.py share /home/kali/share -smb2support' C-m
 tmux select-window -t $2:1

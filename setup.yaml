@@ -158,6 +158,10 @@
     get_url:
       url: https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
       dest: '/home/kali/share/linux/privesc/pspy64'
+  - name: Download & Install linpeas
+    get_url:
+      url: https://github.com/carlospolop/PEASS-ng/releases/download/20220703/linpeas.sh
+      dest: '/home/kali/share/linux/privesc/linpeas.sh'
   - name: Download & Install MesloLGS NF Regular.ttf
     get_url:
       url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
@@ -182,6 +186,10 @@
     command: chown -R kali:kali /home/kali/scripts/
   - name: Change permissions of share folder
     command: chown -R kali:kali /home/kali/share/
+  - name: Change permissions of share pspy32
+    command: chmod +x /home/kali/share/linux/privesc/pspy32
+  - name: Change permissions of share pspy64
+    command: chmod +x /home/kali/share/linux/privesc/pspy64
   - name: Start Guake Terminal
     command: su -c 'guake &' kali
   - name: Configure Guake Terminal
