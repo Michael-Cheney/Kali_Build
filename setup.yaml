@@ -102,6 +102,13 @@
       owner: kali
       group: kali
       mode: '0644'
+  - name: Copy BurpSuite profile
+    ansible.builtin.copy:
+      src: /home/kali/Kali_Build/config/prefs.xml
+      dest: /home/kali/.java/.userPrefs/burp/prefs.xml
+      owner: kali
+      group: kali
+      mode: '0644'
   - name: Copy offsec script
     ansible.builtin.copy:
       src: /home/kali/Kali_Build/scripts/offsec
