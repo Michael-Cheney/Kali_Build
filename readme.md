@@ -21,8 +21,6 @@
 * Add PowerLine setup
 * Add Neofetch to packages
 
-
-
 * wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 * to /usr/local/sbin
 
