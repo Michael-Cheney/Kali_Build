@@ -123,7 +123,11 @@
   - name: Create directory for font files
     file:
       path: /home/kali/.local/share/fonts
-      state: directory      
+      state: directory
+  - name: Create directory for share
+    file:
+      path: /home/kali/share
+      state: directory       
   - name: Download & Install MesloLGS NF Regular.ttf
     get_url:
       url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
