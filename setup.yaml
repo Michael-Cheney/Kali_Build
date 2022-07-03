@@ -109,6 +109,24 @@
       owner: kali
       group: kali
       mode: '0644'
+  - name: Create directory for Burp
+    file:
+      path: /home/kali/burp
+      state: directory
+  - name: Copy BurpSuite icon
+    ansible.builtin.copy:
+      src: /home/kali/Kali_Build/icons/burp.png
+      dest: /home/kali/burp/burp.png
+      owner: kali
+      group: kali
+      mode: '0644'
+  - name: Copy BurpSuite App Link
+    ansible.builtin.copy:
+      src: '/home/kali/Kali_Build/icons/Burp Suite Professional.desktop'
+      dest: /home/kali/burp/burp.png
+      owner: kali
+      group: kali
+      mode: '0644'
   - name: Copy offsec script
     ansible.builtin.copy:
       src: /home/kali/Kali_Build/scripts/offsec
@@ -169,6 +187,10 @@
     get_url:
       url: https://github.com/carlospolop/PEASS-ng/releases/download/20220703/linpeas.sh
       dest: '/home/kali/share/linux/privesc/linpeas.sh'
+  - name: Download BurpSuite
+    get_url:
+      url: https://portswigger-cdn.net/burp/releases/download?product=pro&version=2022.6.1&type=Jar
+      dest: '/home/kali/burp/burpsuite_pro_v2022.6.1.jar'
   - name: Download & Install MesloLGS NF Regular.ttf
     get_url:
       url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
@@ -191,6 +213,8 @@
     command: chown -R kali:kali /home/kali/powerlevel10k/
   - name: Change permissions of scripts folder
     command: chown -R kali:kali /home/kali/scripts/
+  - name: Change permissions of burp folder
+    command: chown -R kali:kali /home/kali/burp
   - name: Change permissions of share folder
     command: chown -R kali:kali /home/kali/share/
   - name: Change permissions of share pspy32

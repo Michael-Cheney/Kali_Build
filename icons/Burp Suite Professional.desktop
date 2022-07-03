@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Burp Suite Professional
+Comment=
+Exec=java -noverify -javaagent:/home/kali/burp/loader.jar -jar /home/kali/burp/burpsuite_pro_v2022.6.1.jar
+Icon=/home/kali/burp/burp.png
+Path=
+Terminal=false
+StartupNotify=false
